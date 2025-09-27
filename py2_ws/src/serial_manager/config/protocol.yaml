@@ -1,0 +1,20 @@
+serial_test:
+  protocol: # 这样子表示从全局命名空间下读取protocol配置
+    name: upper_board
+    serial_port: /dev/UPPER_BOARD
+    baudrate: 115200
+    timeout: 10
+    read_worker_cycle: 0.01
+    header: [0xFC, 0xFB]
+    tailer: [0xFD, 0xFE]
+    if_rev_crc_check: true  
+    if_send_crc_check: true
+    # 除帧头帧尾之外的中间部分
+    send_packet_fields:
+      - {name: "float_data", type: "float", count: 6}
+      - {name: "uint8_data", type: "uint8_t", count: 4}
+      - {name: "crc_bit", type: "uint8_t", count: 1}
+    rev_packet_fields:
+      - {name: "float_data", type: "float", count: 6}
+      - {name: "uint8_data", type: "uint8_t", count: 4}
+      - {name: "crc_bit", type: "uint8_t", count: 1}

@@ -1,0 +1,6 @@
+time stamp
+bool init_camera_flag
+bool init_basket_flag
+float32 camera_center
+float32 basket_x
+float32 basket_y

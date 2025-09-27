@@ -1,0 +1,8 @@
+<launch>
+
+  <rosparam file="$(find ops9_controller)/config/template_ops9.yaml" command="load" />
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="
+  controllers/Ops9Controller
+  "/>
+</launch>

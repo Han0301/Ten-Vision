@@ -1,0 +1,11 @@
+<!-- static_tf.launch -->
+<launch>
+  <!-- 发布传感器到base_link的静态变换 -->
+  <!-- 参数说明：x y z yaw pitch roll parent child -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="action_tf" args="-0.05 0 0 0 0 0  base_link action"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="radar_tf" args="0.350 0 0.35 0 0 0 base_link radar"/>
+
+  <node name="test_pub_odom_node" pkg="localization_interface" type="test_pub_odom_node" output="screen">
+  </node>
+</launch>

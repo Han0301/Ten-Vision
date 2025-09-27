@@ -1,0 +1,33 @@
+actuator_coefficients:
+  - name: "m3508"
+    act2pos: 0.0007669903 # 2PI/8192
+    act2vel: 0.1047197551 # 2PI/60
+    # 注意下面两个：act2effort 是can报文中的电流值（mA）转执行器力矩
+    # effort2act 是关节力矩指令转can报文中的电流值（mA），扭矩常数是0.3
+    act2effort: 0.000015622 # 0.3/(3591/187)/1000 
+    effort2act: 77.311198 # effort/ 0.3 *19*（20000/16384）
+    max_out: 16384
+    if_vesc: false
+  - name: "m2006"
+    act2pos: 0.0007669903 # 2PI/8192
+    act2vel: 0.1047197551 # 2PI/60
+    # effort2act 是关节力矩指令转can报文中的电流值，扭矩常数是0.18
+    act2effort: 0.00018 # 0.18/1000 
+    # effort2act: 5555.555555556 # effort/ 0.18 *1000
+    effort2act: 0.00833
+    max_out: 10000
+    if_vesc: false 
+  - name: "md4219"             
+    act2vel: 0.014959965 # 1/极对数 *(2M_PI/60) 换算得到的是执行器端转速rad/s
+    act2pos: 1.0000 # maide 没有位置反馈
+    act2effort: 0.000359848 # 0.001 * (1.9/52.8) 换算得到的是执行器端的力矩
+    effort2act: 334.225380875 # vesc直接接受电机rpm值，所以要将控制器输出的rad/s换算成rpm, *(60/2M_PI)
+    max_out: 45360.000000 # 根据KV值和所用电池C数
+    if_vesc: true # 使用vesc电调
+  - name: "c6384"
+    act2vel: 0.014959965 # 1/极对数 *(2M_PI/60) 换算得到的是执行器端转速rad/s
+    act2pos: 1.0000 # maide 没有位置反馈
+    act2effort: 0.00002533 # 0.001 * (3.8/150) 换算得到的是执行器端的力矩
+    effort2act: 334.225380875 # vesc直接接受电机rpm值，所以要将控制器输出的rad/s换算成rpm, *(60/2M_PI)
+    max_out: 20160.000000 # 根据KV值和所用电池C数
+    if_vesc: true # 使用vesc电调

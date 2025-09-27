@@ -1,0 +1,18 @@
+<launch>
+
+    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
+        <rosparam file="$(find global_move_base)/config//costmap_common_params.yaml" command="load" ns="global_costmap" />
+        <rosparam file="$(find global_move_base)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+        <rosparam file="$(find global_move_base)/config/local_costmap_params.yaml" command="load" />
+        <rosparam file="$(find global_move_base)/config/global_costmap_params.yaml" command="load" />
+        <rosparam file="$(find global_move_base)/config/base_local_planner_params.yaml" command="load" />
+        <!-- <param name="base_global_planner" value="global_planner/GlobalPlanner" /> -->
+        <!-- <rosparam file="$(find move_control)/config/move_base_config/dwa/dwa_local_planner_params.yaml" command="load" /> -->
+        <!-- <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" /> -->
+        <rosparam file="$(find global_move_base)/config/teb/teb_local_planner_params.yaml" command="load" />
+        <param name="base_local_planner" value="my_planner/MyPlanner" />
+        <param name="controller_frequency" value="200.0"/>
+        <!-- <remap from="/cmd_vel" to="/cmd_vel_111" /> -->
+    </node>
+
+</launch>

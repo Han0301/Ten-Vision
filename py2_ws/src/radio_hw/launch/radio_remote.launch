@@ -1,0 +1,6 @@
+<launch>
+  <rosparam file="$(find radio_hw)/config/radio_config.yaml" command="load"/>
+  <node name="radio_remote_node" pkg="radio_hw" type="radio_remote_node"
+  respawn="true" output="screen"
+  />  
+</launch>

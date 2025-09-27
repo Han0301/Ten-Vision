@@ -1,0 +1,48 @@
+DWAPlannerROS:
+  # 速度参数
+  max_vel_x: 5      # 最大x方向速度
+  min_vel_x: -5     # 最小x方向速度（设置负数将会允许倒车）
+  max_vel_y: 5      # 差分驱动机器人的最大y方向速度
+  min_vel_y: -5     # 差分驱动机器人的最小y方向速度
+  max_vel_trans: 5  # 最大平移速度
+  min_vel_trans: -5 # 最小平移速度（建议不要设置为 0.0）
+  trans_stopped_vel: 0.1  # 当平移速度小于这个值，就让机器人停止
+  acc_lim_trans: 6      # 最大平移加速度
+  acc_lim_x: 6          # x方向的最大加速度上限
+  acc_lim_y: 6          # y方向的加速度上限（差分驱动机器人应该设置为 0.0）
+  
+  max_vel_theta: 6.28      # 最大旋转速度，略小于基座的功能
+  min_vel_theta: -6.28     # 当平移速度可以忽略时的最小角速度
+  theta_stopped_vel: 0.1   # 当旋转速度小于这个值，就让机器人停止
+  acc_lim_theta: 9.0       # 旋转的加速度上限
+
+  # 目标容差参数
+  yaw_goal_tolerance: 0.1         # 目标航向容差
+  xy_goal_tolerance: 0.05          # 目标xy容差
+  latch_xy_goal_tolerance: False   # 到达目标容差范围后，停止移动，只旋转调整航向
+
+  # 向前模拟参数
+  sim_time: 2.0       # 模拟时间，默认值 1.7
+  vx_samples: 10      # x方向速度采样数，默认值 3
+  vy_samples: 10      # 差分驱动机器人y方向速度采样数，只有一个样本
+  vtheta_samples: 40  # 旋转速度采样数，默认值 20
+
+  # 轨迹评分参数
+  path_distance_bias: 32.0 # 靠近全局路径的权重，默认值 32.0
+  goal_distance_bias: 24.0  # 接近导航目标点的权重，默认值 24.0
+  occdist_scale: 0.01       # 控制器避障的权重，默认值 0.01
+  forward_point_distance: 0.325 # 从机器人到评分点的位置，默认值 0.325
+  stop_time_buffer: 0.2          # 在碰撞前机器人必须停止的时间长度，留出缓冲空间，默认值 0.2
+  scaling_speed: 6.0            # 缩放机器人速度的绝对值，默认值 0.25
+  max_scaling_factor: 0.8        # 机器人足迹在高速时能缩放的最大系数，默认值 0.2
+
+  # 防振动参数
+  oscillation_reset_dist: 1.05    # 重置振动标志前需要行进的距离，默认值 0.05
+
+  # 辅助调试选项
+  publish_traj_pc: True       # 是否在 RViz 里发布轨迹
+  publish_cost_grid_pc: True  # 是否在 RViz 里发布代价网格
+  global_frame_id: robot2/odom # 基础坐标系
+
+  # 全向移动机器人配置
+  holonomic_robot: True        # 是否全向移动机器人

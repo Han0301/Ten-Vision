@@ -1,0 +1,29 @@
+controllers:
+  chassis_controller:
+    type: chassis_controller/SwerveChassisController
+    triangle_base: 0.38537 #舵轮三角形分布的底边
+    vertex_to_ChassisCenter_L: 0.2 #舵轮三角形分布顶点到底盘中心的竖直距离
+    base_to_ChassisCenter_B: 0.19314 #舵轮三角形分布的底边到底盘中心的距离
+    wheel_radius: 0.05045
+    steer_calibration_vel: 1.57 #舵轮校准速度
+    wheels:
+      one_front:
+        wheel_joint: "drive_front_joint"
+        swerve_joint: "steer_front_joint"
+        swerve_increment_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        swerve_position_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        steer_io: "steer_front_io"
+      left_back:
+        wheel_joint: "drive_left_rear_joint"
+        swerve_joint: "steer_left_rear_joint"
+        swerve_increment_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        swerve_position_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        steer_io: "steer_left_io"
+      right_back:
+        wheel_joint: "drive_right_rear_joint"
+        swerve_joint: "steer_right_rear_joint"
+        swerve_increment_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        swerve_position_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        steer_io: "steer_right_io"
+      yaw_adjust:
+        pid: { p: 0.05, i: 0.2, d: 2.5, i_max: 0.0, output_max: 3.0, deadzone: 1.0}

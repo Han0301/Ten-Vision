@@ -1,0 +1,32 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  chassis_controller:
+    type: chassis_controller/OmniChassisController
+    # ChassisBase
+    chassis_radius: 0.35
+    wheel_radius: 0.08064
+    ctrl_cmd: /cmd_vel
+    # OmniController
+    wheels:
+      left_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_front_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }
+      left_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_back_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }
+      right_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_back_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }
+      right_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_front_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>upperboard_controller</name>
+  <version>0.0.0</version>
+  <description>The upperboard_controller package</description>
+
+
+  <maintainer email="keten@todo.todo">keten</maintainer>
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>any_node</build_depend>
+  <build_depend>any_worker</build_depend>
+  <build_depend>control_msgs</build_depend>
+  <build_depend>control_toolbox</build_depend>
+  <build_depend>controller_interface</build_depend>
+  <build_depend>hardware_interface</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>rc_ecat_master</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roslint</build_depend>
+  <build_export_depend>any_node</build_export_depend>
+  <build_export_depend>any_worker</build_export_depend>
+  <build_export_depend>control_msgs</build_export_depend>
+  <build_export_depend>control_toolbox</build_export_depend>
+  <build_export_depend>controller_interface</build_export_depend>
+  <build_export_depend>hardware_interface</build_export_depend>
+  <build_export_depend>pluginlib</build_export_depend>
+  <build_export_depend>rc_ecat_master</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>roslint</build_export_depend>
+  <exec_depend>any_node</exec_depend>
+  <exec_depend>any_worker</exec_depend>
+  <exec_depend>control_msgs</exec_depend>
+  <exec_depend>control_toolbox</exec_depend>
+  <exec_depend>controller_interface</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>rc_ecat_master</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>roslint</exec_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+    <controller_interface plugin="${prefix}/upperboard_controller_plugins.xml"/>
+  </export>
+</package>

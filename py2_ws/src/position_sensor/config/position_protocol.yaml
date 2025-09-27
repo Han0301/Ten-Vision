@@ -1,0 +1,22 @@
+position_sensor:
+  protocol: # 这样子表示从全局命名空间下读取protocol配置
+    name: position_sensor
+    serial_port: /dev/ttyACM0
+    baudrate: 115200
+    timeout: 10
+    read_worker_cycle: 0.001
+    header: [0xFC, 0xFB]
+    tailer: [0xFD, 0xFE]
+    if_rev_crc_check: false  
+    if_send_crc_check: false
+    # 除帧头帧尾之外的中间部分
+    send_packet_fields:
+      - {name: "frame_id", type: "uint8_t", count: 1}
+      - {name: "data_length", type: "uint8_t", count: 1}
+      - {name: "float_data", type: "float", count: 2}
+      - {name: "crc_bit", type: "uint8_t", count: 2}
+    rev_packet_fields:
+      - {name: "frame_id", type: "uint8_t", count: 1}
+      - {name: "data_length", type: "uint8_t", count: 1}
+      - {name: "float_data", type: "float", count: 5}
+      - {name: "crc_bit", type: "uint8_t", count: 2}

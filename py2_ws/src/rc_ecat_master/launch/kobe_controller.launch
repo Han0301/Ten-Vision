@@ -1,0 +1,13 @@
+<!-- 新的一键启动，将控制器管理器接入到xbox中，直接使用xbox来开启or 关闭控制器 -->
+
+<launch>
+  <!-- load controller parameters -->
+  <rosparam file="$(find rc_ecat_master)/config/controller/kobe_controllers.yaml" command="load" />
+
+  <!-- launch the xbox node -->
+  <include file="$(find xbox_hw)/launch/xbox_hw.launch"/>
+  <!-- launch the upperboard node -->
+  <include file="$(find upperboard_app)/launch/upperboard_app_node.launch"/>
+
+
+</launch>  

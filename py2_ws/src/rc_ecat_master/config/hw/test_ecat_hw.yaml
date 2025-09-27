@@ -1,0 +1,91 @@
+ConfigPath:
+  - ActuatorsConfig: "actuator_coeff.yaml"
+  - EcatConfig: "ecat/kobe_ecat_config.yaml"
+  - EcatSlaveHWConfig: "ecat_hw/ecat_hw.yaml"
+Actuators:
+  - name: "steer_front_joint"
+    type: "m2006"
+    id: 0
+    canbus: CAN0  
+    reducer: 120.0
+  - name: "steer_left_rear_joint"
+    type: "m2006"
+    id: 1
+    canbus: CAN0
+    reducer: 120.0
+  - name: "steer_right_rear_joint"
+    type: "m2006"
+    id: 2
+    canbus: CAN0
+    reducer: 120.0
+  - name: "rising_left_joint"
+    type: "m2006"
+    id: 3
+    canbus: CAN0
+    reducer: 36.0
+  - name: "rising_right_joint"
+    type: "m2006"
+    id: 4
+    canbus: CAN0
+    reducer: 36.0
+  - name: "shoot_encoder_joint"
+    type: "m2006"
+    id: 5
+    canbus: CAN0
+    reducer: 1.0
+  - name: "drive_front_joint"
+    type: "md4219"
+    id: 0
+    canbus: CAN1
+    reducer: 5.00000000
+  - name: "drive_left_rear_joint"
+    type: "md4219"
+    id: 1
+    canbus: CAN1
+    reducer: 5.00000000
+  - name: "drive_right_rear_joint"
+    type: "md4219"
+    id: 2
+    canbus: CAN1
+    reducer: 5.00000000
+  - name: "shoot_motor_joint"
+    type: "c6384"
+    id: 3
+    canbus: CAN1
+    reducer: 1.00000000
+Gpio: # 由于 板上的led是低电平点亮，所以初始值设置为0
+  - name: "shoot_trigger_joint"
+    type: "output"
+    id: 0
+    initial_value: 0
+  - name: "RGB_joint"
+    type: "output"
+    id: 1
+    initial_value: 0
+  - name: "zero_joint"
+    type: "output"
+    id: 2
+    initial_value: 0
+  - name: "lock_joint"
+    type: "output"
+    id: 3
+    initial_value: 0
+  - name: "steer_front_io" # 板上的光电门为输入上拉，所以初始值设为1
+    type: "input"
+    id: 0
+    initial_value: 1
+  - name: "steer_left_io"
+    type: "input"
+    id: 1
+    initial_value: 1
+  - name: "steer_right_io"
+    type: "input"
+    id: 2
+    initial_value: 1
+# Ops9:
+#   - name: "action1"
+#     serial_port: "/dev/ttyACM1"
+
+# 如果使用serial_manager，需要在启动节点之前导入参数
+# Serial_To_32:
+#   name: "upper_board"

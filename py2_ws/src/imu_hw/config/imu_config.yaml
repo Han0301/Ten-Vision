@@ -1,0 +1,4 @@
+imu_hw:
+  serial_port: /dev/ttyACM2
+  baudrate: 115200
+  pub_worker_cycle: 0.002

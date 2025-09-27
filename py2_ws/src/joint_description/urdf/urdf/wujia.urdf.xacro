@@ -1,0 +1,108 @@
+<robot name="mycar" xmlns:xacro="http://wiki.ros.org/xacro">
+    <!-- 设置 base_footprint  -->
+    <link name="base_footprint">
+        <!--<visual>
+            <geometry>
+                <sphere radius="0.001" /> 
+            </geometry>
+        </visual>-->
+    </link>
+
+    <!-- 添加底盘 -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.25" length="0.10" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <material name="yellow">
+                <color rgba="0.8 0.3 0.1 0.5" />
+            </material>
+        </visual>
+    </link>
+
+    <joint name="base_link2base_footprint" type="fixed">
+        <parent link="base_footprint" />
+        <child link="base_link"/>
+        <origin xyz="0 0 0.1" />
+    </joint>
+
+    <!-- 添加驱动轮 -->
+    <link name="left_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.09" length="0.035" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5708 0 0.52360" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+
+    </link>
+
+    <joint name="left_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="left_wheel" />
+        <origin xyz="-0.125 0.21650 -0.01" />
+        <axis xyz="-0.125 0.21650 0" />
+    </joint>
+
+
+    <link name="right_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.09" length="0.035" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5708 0 -0.52360" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+
+    </link>
+
+    <joint name="right_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="right_wheel" />
+        <origin xyz="-0.125 -0.21650 -0.01" />
+        <axis xyz="-0.125 -0.21650 0" />
+    </joint>
+
+
+    <link name="front_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="0.09" length="0.035" />
+            </geometry>
+            <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+            <material name="black">
+                <color rgba="0.0 0.0 0.0 1.0" />
+            </material>
+        </visual>
+
+    </link>
+
+    <joint name="front_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="front_wheel" />
+        <origin xyz="0.25 0 -0.01" />
+        <axis xyz="0.25 0 0" />
+    </joint>
+    <xacro:macro name="wheel_transmission" params="prefix mechanical_reduction">
+      <transmission name="${prefix}_wheel">
+          <type>transmission_interface/SimpleTransmission</type>
+          <actuator name="${prefix}_wheel_motor">
+              <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+              <mechanicalReduction>${mechanical_reduction}</mechanicalReduction>
+          </actuator>
+          <joint name="${prefix}_wheel_joint">
+              <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+          </joint>
+      </transmission>
+    </xacro:macro>
+
+    <xacro:wheel_transmission prefix="right" mechanical_reduction="19.2032"/>
+    <xacro:wheel_transmission prefix="left" mechanical_reduction="19.2032"/>
+    <xacro:wheel_transmission prefix="front" mechanical_reduction="19.2032"/>
+</robot>

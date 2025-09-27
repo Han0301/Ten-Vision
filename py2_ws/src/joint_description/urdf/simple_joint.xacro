@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="rmrobot">
+    <!-- Constants for robot dimensions -->
+    <xacro:property name="mass" value="0.5"/> <!-- arbitrary value for mass -->
+    <xacro:property name="width" value="0.1"/> <!-- Square dimensions (widthxwidth) of beams -->
+    <xacro:property name="height1" value="1"/> <!-- Link 1 -->
+    <xacro:property name="height2" value="0.5"/> <!-- Link 2 -->
+    <xacro:property name="axel_offset" value="0.05"/> <!-- Space btw top of beam and the each joint -->
+    <!-- Used for fixing robot to Gazebo 'base_link' -->
+    <link name="world"/>
+    <joint name="fixed" type="fixed">
+        <parent link="world"/>
+        <child link="link1"/>
+    </joint>
+
+    <link name="link1">
+        <collision>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height1}"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height1}"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+        <inertial>
+            <origin xyz="0 0 ${height1/2}" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+                    ixx="${mass / 12.0 * (width*width + height1*height1)}" ixy="0.0" ixz="0.0"
+                    iyy="${mass / 12.0 * (height1*height1 + width*width)}" iyz="0.0"
+                    izz="${mass / 12.0 * (width*width + width*width)}"/>
+        </inertial>
+    </link>
+    <joint name="joint_no_reducer" type="revolute">
+        <axis xyz="0 1 0"/>
+        <origin xyz="0 ${width} ${height1 - axel_offset}" rpy="0 1.57 0"/>
+        <!--      limit not work while type="continuous"-->
+        <limit effort="5." velocity="50." lower="-1e9" upper="1e9"/>
+        <dynamics damping="0.01" friction="0.02"/>
+        <parent link="link1"/>
+        <child link="link2"/>
+    </joint>
+
+    <link name="link2">
+        <collision>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2}"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <geometry>
+                <box size="${width} ${width} ${height2}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <inertial>
+            <origin xyz="0 0 ${height2/2 - axel_offset}" rpy="0 0 0"/>
+            <mass value="${mass}"/>
+            <inertia
+                    ixx="${mass / 12.0 * (width*width + height2*height2)}" ixy="0.0" ixz="0.0"
+                    iyy="${mass / 12.0 * (height2*height2 + width*width)}" iyz="0.0"
+                    izz="${mass / 12.0 * (width*width + width*width)}"/>
+        </inertial>
+    </link>
+
+    <transmission name="tran1">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="joint_no_reducer">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="joint1_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>19.2032</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

@@ -1,0 +1,12 @@
+<launch>
+
+  <rosparam file="$(find localization_interface)/config/sensor.yaml" command="load" />
+  <!-- 这里的偏置得根据ops9的坐标系来设置，方便程序解算 -->
+  <node pkg="tf2_ros" type="static_transform_publisher" name="action_tf" args="-0.05 0 0 0 0 0  map action"/>
+
+  <node pkg="tf2_ros" type="static_transform_publisher" name="radar_tf" args="0.350 0 0.35 0 0 0 map radar"/>
+
+  <!-- launch-prefix表示在launch启动节点时，会在执行命令前预先插入ethercat_grant命令 -->
+  <node name="pub_odom_node" pkg="localization_interface" type="pub_odom_node" output="screen">
+  </node>
+</launch>

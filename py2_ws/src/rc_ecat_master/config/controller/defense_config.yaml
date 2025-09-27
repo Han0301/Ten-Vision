@@ -1,0 +1,16 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  defense_controller:
+    type: defense_controller/DefenseController
+    rise_speed: 37.0
+    keep_speed: 1.0
+    action_time: 1.0
+    motor:
+      left_motor:
+        motor_joint: rising_left_joint
+        increment_pid: { p: 100000.0, i: 1000.0, d: 0.0, i_max: 360000.0, output_max: 360000.0, deadzone: 0.5}
+      right_motor:
+        motor_joint: rising_right_joint
+        increment_pid: { p: 80000.0, i: 4000.0, d: 0.0, i_max: 360000.0, output_max: 360000.0, deadzone: 0.5}

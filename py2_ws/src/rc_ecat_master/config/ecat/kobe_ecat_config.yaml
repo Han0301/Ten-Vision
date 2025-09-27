@@ -1,0 +1,6 @@
+ecat_config:
+  master:
+    name: "enp87s0"
+  slave:
+    name: "RcEcatSlave"
+    address: 1

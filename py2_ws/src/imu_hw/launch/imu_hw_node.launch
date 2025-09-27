@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find imu_hw)/config/imu_config.yaml" command="load"/>
+  <node name="imu_hw_node" pkg="imu_hw" type="imu_hw_node" respawn="true" output="screen" />
+</launch>

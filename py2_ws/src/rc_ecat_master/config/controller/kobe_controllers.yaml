@@ -1,0 +1,52 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  # upper_board:
+  # upperboard_controller:
+  #   type: upperboard_controller/UpperboardController
+  #   name: upper_board
+  #   ctrl_topic: /upperboard_cmd      
+  chassis_controller:
+    type: chassis_controller/OmniChassisController
+    # ChassisBase
+    chassis_radius: 0.35
+    wheel_radius: 0.08064
+    ctrl_cmd: cmd_vel
+
+    #新增：关节限制配置
+
+    
+    # OmniController
+    wheels:
+      left_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_front_wheel_joint
+        #pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+        pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: 0.5}
+      left_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_back_wheel_joint
+        pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: 0.5}
+      right_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_back_wheel_joint
+        pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: 0.5}
+      right_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_front_wheel_joint
+        pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: 0.5}
+    yaw_adjust:
+        pid: { p: 0.05, i: 0.2, d: 2.5, i_max: 0.0, output_max: 3.0, deadzone: 0.5}
+    basket_adjust:
+        pid: { p: 0.004, i: 0.0, d: 1.0, i_max: 1.0, output_max: 1.0, deadzone: 6.0}
+  Ops9Controller:
+    type: ops9_controller/Ops9Controller
+    name: action1
+    if_pub_data: false # 一般rc_ecat_master那边已然会进行发布，所以这里就不进行发布了
+    pub_topic: action_msg
+    ctrl_topic: action_cmd

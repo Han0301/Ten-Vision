@@ -1,0 +1,8 @@
+controllers:
+  Ops9Controller:
+    type: ops9_controller/Ops9Controller
+    name: action1
+    if_pub_data: false # 一般rc_ecat_master那边已然会进行发布，所以这里就不进行发布了
+    pub_topic: action_msg
+    ctrl_topic: action_cmd
+

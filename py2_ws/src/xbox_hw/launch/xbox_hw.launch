@@ -1,0 +1,6 @@
+<launch>
+  <rosparam file="$(find xbox_hw)/config/xbox_setup.yaml" command="load"/>
+  <node name="xbox_remote_node" pkg="xbox_hw" type="xbox_remote_node"
+  respawn="true" output="screen"
+  />  
+</launch>

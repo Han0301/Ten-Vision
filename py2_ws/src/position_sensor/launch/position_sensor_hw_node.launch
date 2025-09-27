@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find position_sensor)/config/position_protocol.yaml" command="load"/>
+  <node name="position_sensor_hw_node" pkg="position_sensor" type="position_sensor_hw_node" respawn="true" output="screen" />
+</launch>

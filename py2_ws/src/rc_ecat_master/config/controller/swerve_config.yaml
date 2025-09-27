@@ -1,0 +1,45 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  chassis_controller:
+    type: chassis_controller/SwerveChassisController
+    triangle_base: 0.38628 #舵轮三角形分布的底边
+    vertex_to_ChassisCenter_L: 0.2 #舵轮三角形分布顶点到底盘中心的竖直距离
+    base_to_ChassisCenter_B: 0.19314 #舵轮三角形分布的底边到底盘中心的距离
+    wheel_radius: 0.05045
+    steer_calibration_vel: 5.0 #舵轮校准速度
+    light_door_skew: 0.4 #
+    x_acceleration: 3.0
+    y_acceleration: 3.0
+    forward_acceleration: 2.0
+    reverse_acceleration: 2.0
+    initial_guessed_basket_x: 7.0
+    initial_guessed_basket_y: -3.0
+    basket_x: 6.84
+    basket_y: -3.67
+    camera_center: 960.0
+    lock_RGB_joint: "lock_joint"
+    wheels:
+      one_front:
+        wheel_joint: drive_front_joint
+        swerve_joint: steer_front_joint
+        swerve_increment_pid: { p: 480000.0, i: 5000.0, d: 0.0, i_max: 1200000.0, output_max: 1200000.0, deadzone: 0.02}
+        swerve_position_pid: { p: 10.0, i: 0.0, d: 0.0, i_max: 20000.0, output_max: 10000.0, deadzone: 0.002}
+        steer_io: "steer_front_io"
+      left_back:
+        wheel_joint: drive_left_rear_joint
+        swerve_joint: steer_left_rear_joint
+        swerve_increment_pid: { p: 480000.0, i: 5000.0, d: 0.0, i_max: 1200000.0, output_max: 1200000.0, deadzone: 0.02}
+        swerve_position_pid: { p: 10.0, i: 0.0, d: 0.0, i_max: 20000.0, output_max: 10000.0, deadzone: 0.002}
+        steer_io: "steer_left_io"
+      right_back:
+        wheel_joint: drive_right_rear_joint
+        swerve_joint: steer_right_rear_joint
+        swerve_increment_pid: { p: 480000.0, i: 5000.0, d: 0.0, i_max: 1200000.0, output_max: 1200000.0, deadzone: 0.02}
+        swerve_position_pid: { p: 10.0, i: 0.0, d: 0.0, i_max: 20000.0, output_max: 10000.0, deadzone: 0.002}
+        steer_io: "steer_right_io"
+    yaw_adjust:
+        pid: { p: 0.5, i: 0.0, d: 0.0, i_max: 0.25, output_max: 1.0, deadzone: 0.2}
+    basket_adjust: 
+        pid: { p: 0.005, i: 0.0, d: 0.001, i_max: 0.05, output_max: 1.0, deadzone: 6.0}

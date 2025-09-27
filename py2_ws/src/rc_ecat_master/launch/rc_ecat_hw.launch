@@ -1,0 +1,12 @@
+<launch>
+
+  <rosparam file="$(find rc_ecat_master)/config/test_hw.yaml" command="load" />
+  <rosparam file="$(find rc_ecat_master)/config/joint_limits.yaml" command="load" />
+  <param name="robot_description"
+  command="$(find xacro)/xacro $(find joint_description)/urdf/simple_joint.xacro"/>
+
+  <!-- launch-prefix表示在launch启动节点时，会在执行命令前预先插入ethercat_grant命令 -->
+  <node name="rc_ecat_hw_node" pkg="rc_ecat_master" type="rc_ecat_hw_node" output="screen">
+
+  </node>
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+
+  <rosparam file="$(find rc_ecat_master)/config/controller/test_md4219_controllers.yaml" command="load" />
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="
+  controllers/joint_state_controller
+  controllers/joint_4219_controller
+  controllers/steer_front_joint_controller
+  "/>
+
+</launch>

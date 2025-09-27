@@ -1,0 +1,18 @@
+xbox_settings:
+  usb_port: /dev/XBOX
+  baudrate: 115200
+  communication_cycle: 0.0001
+  pub_cycle: 0.001
+  if_pub_cmd_vel: true
+  if_pub_xbox: false
+  joy_deadzone: 3000.0
+  max_vel: 5.0
+  retry_times: 5
+  use_pbox: false
+controller_manager_settings:
+  controller_to_load: ["controllers/joint_state_controller", "controllers/chassis_controller"]
+  controller_to_start: ["controllers/chassis_controller"]
+  controller_to_stop: ["controllers/chassis_controller"]
+  
+
+  

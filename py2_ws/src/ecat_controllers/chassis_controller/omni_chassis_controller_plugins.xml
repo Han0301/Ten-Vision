@@ -1,0 +1,11 @@
+<library path="lib/libOmniChassisController">
+
+  <class name="chassis_controller/OmniChassisController"
+         type="chassis_controller::OmniChassisController"
+         base_class_type="controller_interface::ControllerBase">
+      <description>
+      This is a simple chassis controller for omni chassis.
+      </description>
+  </class>
+
+</library>

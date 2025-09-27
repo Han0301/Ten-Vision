@@ -1,0 +1,18 @@
+joint_limits:
+  joint_no_reducer: 
+    has_position_limits: false
+    min_position: -1e9      # -170 degrees in radians 单位：弧度
+    max_position:  1e9      # +170 degrees
+    
+    has_velocity_limits: true
+    max_velocity:  50.45      # \~180 deg/s 单位：弧度/秒
+    
+    has_acceleration_limits: false 
+    max_acceleration:  1e9   # \~900 deg/s² 单位：弧度/秒²
+    
+    has_effort_limits: true   
+    max_effort:  500.0          # Nm 
+    
+    has_jerk_limits: false     # Disabled by default
+    
+    angle_wraparound: true   # For continuous joints only

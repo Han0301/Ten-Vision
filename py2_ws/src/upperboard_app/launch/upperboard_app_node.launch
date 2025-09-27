@@ -1,0 +1,4 @@
+<launch>
+  <rosparam file="$(find upperboard_app)/config/protocol.yaml" command="load"/>
+  <node name="upperboard_app_node" pkg="upperboard_app" type="upperboard_app_node" respawn="true" output="screen" />
+</launch>

@@ -1,0 +1,8 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  joint1_velocity_controller:
+    type: effort_controllers/JointVelocityController
+    joint: joint_no_reducer
+    pid: { p: 0.8, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }

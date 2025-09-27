@@ -1,0 +1,15 @@
+radio_settings:
+  usb_port: /dev/ttyACM3
+  baudrate: 420000
+  communication_cycle: 0.01
+  pub_cycle: 0.002
+  if_pub_cmd_vel: true
+  joy_deadzone: 3000.0
+  max_vel: 5.0
+  retry_times: 5                         
+  CRSF_NUM_CHANNELS: 16                            #通道数
+  CRSF_CHANNEL_VALUE_MIN: 172                      #通道最小值限制
+  CRSF_CHANNEL_VALUE_MID: 992                      #通道中位点
+  CRSF_CHANNEL_VALUE_MAX: 1811                     #通道最大值限制
+  CRSF_MAX_PACKET_SIZE: 64                         #最大数据包大小
+  CRSF_CRC_POLY: 0xD5

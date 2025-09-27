@@ -1,0 +1,15 @@
+<launch>
+
+  <rosparam file="$(find rc_ecat_master)/config/controller/defense_config.yaml" command="load" />
+  <!-- launch the xbox node -->
+  <include file="$(find xbox_hw)/launch/xbox_hw.launch"/>
+  <!-- <include file="$(find pbox_hw)/launch/pbox_hw.launch"/> -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="
+  controllers/joint_state_controller
+  controllers/defense_controller
+  "/>
+
+    <!-- launch the upperboard node -->
+  <!-- <include file="$(find upperboard_app)/launch/upperboard_app_node.launch"/> -->
+
+</launch>

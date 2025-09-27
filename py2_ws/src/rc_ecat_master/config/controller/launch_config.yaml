@@ -1,0 +1,18 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  launch_controller:
+    type: launch_controller/LaunchController
+    mechanical_zero_position: -0.015
+    speed_offset: 0.0
+    max_distance: 0.32501
+    reset_time: 1.0
+    dribble_distance: 0.15
+    encoder_joint: shoot_encoder_joint
+    motor_joint: shoot_motor_joint
+    trigger_joint: shoot_trigger_joint
+    RGB_joint: RGB_joint
+    # position_pid: { p: 800.0, i: 0.05, d: 0.0, i_max: 10.0, output_max: 40.0, deadzone: 0.002}
+    position_pid: { p: 1600.0, i: 0.05, d: 15.0, i_max: 10.0, output_max: 40.0, deadzone: 0.002}
+    

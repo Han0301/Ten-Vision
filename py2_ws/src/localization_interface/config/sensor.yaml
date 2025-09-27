@@ -1,0 +1,23 @@
+radar:
+  name: mid360
+  x_offset: 0.005
+  y_offset: 0.175
+  topic_name: filtered_pose
+  frame_id: mid360
+wheel_odometer:  
+  # name: action
+  # x_offset: -0.050 
+  # y_offset: 0.000
+  # topic_name: action1_msg
+  # frame_id: action
+  name: position
+  x_offset: 
+  y_offset: 
+  topic_name: 
+  frame_id: 
+odom:
+  x_offset: 0.005 # 发布的odom数据相对map的偏移
+  y_offset: 0.175
+  if_chassis_center: false # 即当前发布的数据即为底盘中心
+  topic_name: odom 
+  pub_cycle_: 0.01 # 发布频率

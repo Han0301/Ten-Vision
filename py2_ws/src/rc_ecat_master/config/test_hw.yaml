@@ -1,0 +1,9 @@
+ConfigPath:
+  - ActuatorsConfig: "actuator_coeff.yaml"
+  - EcatConfig: "ecat_config.yaml"
+Actuators:
+  - name: "joint_no_reducer"
+    type: "m3508"
+    id: 0
+    canbus: CAN0
+    reducer: 19.203208556

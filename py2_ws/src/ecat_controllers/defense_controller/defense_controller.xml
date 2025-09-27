@@ -1,0 +1,11 @@
+<library path="lib/libDefenseController">
+
+  <class name="defense_controller/DefenseController"
+         type="defense_controller::DefenseController"
+         base_class_type="controller_interface::ControllerBase">
+      <description>
+      This is a defensive mechanism controller for R2 robot.
+      </description>
+  </class>
+
+</library>

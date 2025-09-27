@@ -1,0 +1,11 @@
+<library path="lib/libSwerveChassisController">
+
+  <class name="chassis_controller/SwerveChassisController"
+         type="chassis_controller::SwerveChassisController"
+         base_class_type="controller_interface::ControllerBase">
+      <description>
+      This is a simple chassis controller for swerve chassis.
+      </description>
+  </class>
+
+</library>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>position_sensor</name>
+  <version>0.0.0</version>
+  <description>The position_sensor package</description>
+
+  <maintainer email="keten@todo.todo">keten</maintainer>
+
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>any_node</build_depend>
+  <build_depend>any_worker</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>serial_manager</build_depend>
+  <build_depend>signal_handler</build_depend>
+  <build_export_depend>any_node</build_export_depend>
+  <build_export_depend>any_worker</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>serial_manager</build_export_depend>
+  <build_export_depend>signal_handler</build_export_depend>
+  <exec_depend>any_node</exec_depend>
+  <exec_depend>any_worker</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>serial_manager</exec_depend>
+  <exec_depend>signal_handler</exec_depend>
+  <depend>ros_ecat_msgs</depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

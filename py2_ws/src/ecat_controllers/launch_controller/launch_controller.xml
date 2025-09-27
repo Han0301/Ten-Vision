@@ -1,0 +1,11 @@
+<library path="lib/libLaunchController">
+
+  <class name="launch_controller/LaunchController"
+         type="launch_controller::LaunchController"
+         base_class_type="controller_interface::ControllerBase">
+      <description>
+      This is a launch mechanism controller for R2 robot.
+      </description>
+  </class>
+
+</library>

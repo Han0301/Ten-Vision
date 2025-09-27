@@ -1,0 +1,9 @@
+<library path="lib/libOps9Controller">
+
+  <class name="ops9_controller/Ops9Controller" type="ops9_controller::Ops9Controller" base_class_type="controller_interface::ControllerBase">
+    <description>
+      This is a simple controller for ops9.
+    </description>
+  </class>
+
+</library>

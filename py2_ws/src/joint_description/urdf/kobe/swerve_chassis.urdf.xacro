@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="swerve_chassis">
+  <!-- 定义一些常量 -->
+  <xacro:property name="base_size" value="0.5"/>
+  <xacro:property name="wheel_box_size" value="0.1"/>
+  <xacro:property name="wheel_cylinder_radius" value="0.04"/>
+  <xacro:property name="wheel_cylinder_length" value="0.02"/>
+  <xacro:property name="steer_joint_limit" value="1.57"/>
+
+  <!-- 基础链接 -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="${base_size} ${base_size} 0.05"/>
+      </geometry>
+      <material name="gray"/>
+    </visual>
+  </link>
+
+  <!-- 虚拟steering部件 -->
+  <!-- 前驱转向 -->
+  <link name="steer_front_link">
+    <visual>
+      <geometry>
+        <box size="${wheel_box_size} ${wheel_box_size} ${wheel_box_size}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+  <joint name="steer_front_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="steer_front_link"/>
+    <!-- 此处原点位置请根据实际机器人布局进行调整 -->
+    <origin xyz="0.3 0.2 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-${steer_joint_limit}" upper="${steer_joint_limit}" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- 左后转向 -->
+  <link name="steer_left_rear_link">
+    <visual>
+      <geometry>
+        <box size="${wheel_box_size} ${wheel_box_size} ${wheel_box_size}"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+  <joint name="steer_left_rear_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="steer_left_rear_link"/>
+    <origin xyz="-0.3 0.2 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-${steer_joint_limit}" upper="${steer_joint_limit}" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- 右后转向 -->
+  <link name="steer_right_rear_link">
+    <visual>
+      <geometry>
+        <box size="${wheel_box_size} ${wheel_box_size} ${wheel_box_size}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+  <joint name="steer_right_rear_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="steer_right_rear_link"/>
+    <origin xyz="-0.3 -0.2 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-${steer_joint_limit}" upper="${steer_joint_limit}" effort="10" velocity="1"/>
+  </joint>
+
+  <!-- 虚拟驱动部件 -->
+  <!-- 前驱轮驱动 -->
+  <link name="drive_front_link">
+    <visual>
+      <geometry>
+        <cylinder radius="${wheel_cylinder_radius}" length="${wheel_cylinder_length}"/>
+      </geometry>
+      <material name="red"/>
+    </visual>
+  </link>
+  <!-- 这里采用continuous关节，表示轮子可一直旋转 -->
+  <joint name="drive_front_joint" type="continuous">
+    <parent link="steer_front_link"/>
+    <child link="drive_front_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- 左后轮驱动 -->
+  <link name="drive_left_rear_link">
+    <visual>
+      <geometry>
+        <cylinder radius="${wheel_cylinder_radius}" length="${wheel_cylinder_length}"/>
+      </geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+  <joint name="drive_left_rear_joint" type="continuous">
+    <parent link="steer_left_rear_link"/>
+    <child link="drive_left_rear_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+
+  <!-- 右后轮驱动 -->
+  <link name="drive_right_rear_link">
+    <visual>
+      <geometry>
+        <cylinder radius="${wheel_cylinder_radius}" length="${wheel_cylinder_length}"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+  <joint name="drive_right_rear_joint" type="continuous">
+    <parent link="steer_right_rear_link"/>
+    <child link="drive_right_rear_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+  </joint>
+</robot>

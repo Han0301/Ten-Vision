@@ -1,0 +1,8 @@
+controllers:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  joint_2006_controller:
+    type: effort_controllers/JointVelocityController
+    joint: steer_front_joint
+    pid: { p: 0.5, i: 0, d: 0.0, i_max: 0.0, i_min: 0.0, antiwindup: true }

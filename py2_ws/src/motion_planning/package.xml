@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>motion_planning</name>
+  <version>0.0.0</version>
+  <description>The motion_planning package</description>
+
+  <maintainer email="keten@todo.todo">keten</maintainer>
+
+
+  <license>TODO</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>move_base</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_export_depend>move_base</build_export_depend>
+  <build_export_depend>roscpp</build_export_depend>
+  <exec_depend>move_base</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

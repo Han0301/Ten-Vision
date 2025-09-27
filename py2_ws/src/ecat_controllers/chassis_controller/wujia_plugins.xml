@@ -1,0 +1,11 @@
+<library path="lib/libwujiaController">
+
+  <class name="chassis_controller/wujiaController"
+         type="chassis_controller::wujiaController"
+         base_class_type="controller_interface::ControllerBase">
+      <description>
+      This is a simple chassis controller for wujia chassis.
+      </description>
+  </class>
+
+</library>

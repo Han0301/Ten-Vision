@@ -1,0 +1,23 @@
+<launch>
+
+  <rosparam file="$(find rc_ecat_master)/config/controller/swerve_config.yaml" command="load" />
+  <rosparam file="$(find rc_ecat_master)/config/controller/launch_config.yaml" command="load" />
+  <rosparam file="$(find rc_ecat_master)/config/controller/defense_config.yaml" command="load" />
+  <!-- launch the xbox node -->
+  <!-- <include file="$(find xbox_hw)/launch/xbox_hw.launch"/> -->
+  <!-- <include file="$(find pbox_hw)/launch/pbox_hw.launch"/> -->
+  <include file="$(find imu_hw)/launch/imu_hw_node.launch" respawn="true"/>
+
+  <!-- launch the radio master -->
+
+  <!-- <include file="$(find pbox_hw)/launch/pbox_hw.launch"/> -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="true" output="screen" args="
+  controllers/joint_state_controller
+  controllers/chassis_controller  controllers/defense_controller
+  controllers/launch_controller
+  "/>
+
+    <!-- launch the upperboard node -->
+  <!-- <include file="$(find upperboard_app)/launch/upperboard_app_node.launch"/> -->
+
+</launch>

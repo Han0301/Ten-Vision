@@ -1,0 +1,13 @@
+controllers:
+  defense_controller:
+    type: defense_controller/DefenseController
+    rise_speed: 100.0
+    keep_speed: 2.0
+    action_time: 1.0
+    motor:
+      left_motor:
+        motor_joint: rising_left_joint
+        increment_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}
+      right_motor:
+        motor_joint: rising_right_joint
+        increment_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 10000.0, output_max: 10000.0, deadzone: -0.5}

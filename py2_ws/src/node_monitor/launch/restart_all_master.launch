@@ -1,0 +1,11 @@
+<launch>
+
+  <node name="stop_controller_master" pkg="node_monitor" type="monitor_node" output="screen" args="controller_master controller_spawner 2 ''"/>
+  <node name="restart_controller_master" pkg="node_monitor" type="monitor_node" output="screen" args="controller_master controller_spawner 3 '' "/>
+  <!-- under controller_master,will rosrun nodes: radio_remote dribble_node pub_odom_node -->
+  <node name="resstart_ethercat_master" pkg="node_monitor" type="monitor_node" output="screen" args="ethercat_master rc_ecat_hw_node 3 '' "/>
+  <node name="restart_dribblle_node" pkg="node_monitor" type="monitor_node" output="screen" args="controller_master dribble_node 3 '' "/>
+  <node name="restart_radio_remote_node" pkg="node_monitor" type="monitor_node" output="screen" args="controller_master radio_remote_node 3 '' "/>
+  <node name="restart_pub_odom_node" pkg="node_monitor" type="monitor_node" output="screen" args="controller_master pub_odom_node 3 '' "/>
+
+</launch> 

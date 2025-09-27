@@ -1,0 +1,25 @@
+<launch>
+
+  <rosparam file="$(find rc_ecat_master)/config/controller/wujia_controllers.yaml" command="load" />
+
+
+  <!-- note: xbox hw must be launched before the controller load -->
+  <!-- <include file="$(find xbox_hw)/launch/xbox_hw.launch"/> -->
+
+
+  <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="
+  controllers/joint_state_controller
+  "/>-->
+
+  <!--<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" 
+      args="
+      controllers/joint_state_controller
+      controllers/chassis_controller  
+      "/>-->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" 
+    args="
+    controllers/joint_state_controller
+    controllers/chassis_controller 
+    "/>
+
+</launch>

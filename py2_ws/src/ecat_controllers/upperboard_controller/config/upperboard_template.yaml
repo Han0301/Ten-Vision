@@ -1,0 +1,5 @@
+controllers:
+  UpperbardController:
+    type: upperboard_controller/UpperbardController
+    name: upper_board
+    ctrl_topic: /upperboard_cmd

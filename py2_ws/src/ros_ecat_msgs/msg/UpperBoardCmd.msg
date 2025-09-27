@@ -1,0 +1,9 @@
+time stamp
+float32 shooter_factor
+uint8 shoot
+uint8 raiseUp
+uint8 putDown
+uint8 go1PoseUp
+uint8 go1PoseDown
+uint8 sendShootMsg
+uint8 cylinder_test

@@ -1,0 +1,11 @@
+<launch>
+  <!-- launch the other ctrl hw to ctrl the robot -->
+
+  <include file="$(find radio_hw)/launch/radio_remote.launch"/>
+  <include file="$(find dribble_controller)/launch/dribble_node.launch"/>
+  <include file="$(find localization_interface)/launch/pub_odom_node.launch"/>
+  <node name="robot_communication_node" pkg="robot_communication" type="robot_communicate_node"
+  respawn="true" output="screen"
+  />  
+
+</launch>

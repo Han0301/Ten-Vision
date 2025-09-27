@@ -1,0 +1,31 @@
+contbrollers:
+  chassis_controller:
+    type: chassis_controller/OmniChassisController
+    # ChassisBase
+    chassis_radius: 0.35
+    wheel_radius: 0.08064
+    ctrl_cmd: cmd_vel
+    # OmniController
+    wheels:
+      left_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_front_wheel_joint
+        pid: { p: 12.0, i: 1.4, d: 0.1, i_max: 20000,output_max: 10000,deadzone: 0.5} #-0.5
+      left_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: left_back_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 20000,output_max: 10000 ,deadzone: 0.5}
+      right_back:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_back_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 20000,output_max: 10000 ,deadzone: 0.5}
+      right_front:
+        pose: [ 0.147, 0.147, 0.785 ]
+        radius: 0.08064
+        joint: right_front_wheel_joint
+        pid: { p: 0.4, i: 0, d: 0.0, i_max: 20000,output_max: 10000 ,deadzone: 0.5}
+    yaw_adjust:
+        pid: { p: 0.2, i: 0.02, d: 0.06, i_max: 0.0,output_max: 2.0 ,deadzone: 1.0}

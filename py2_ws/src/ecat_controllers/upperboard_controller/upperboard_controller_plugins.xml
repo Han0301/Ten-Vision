@@ -1,0 +1,9 @@
+<library path="lib/libUpperboardController">
+
+  <class name="upperboard_controller/UpperboardController" type="upperboard_controller::UpperboardController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      This is a simple controller for Upperboard.
+    </description>
+  </class>
+
+</library>

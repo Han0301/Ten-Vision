@@ -1,0 +1,6 @@
+<launch>
+  <rosparam file="$(find pbox_hw)/config/pbox_setup.yaml" command="load"/>
+  <node name="pbox_remote_node" pkg="pbox_hw" type="pbox_remote_node"
+  respawn="true" output="screen"
+  />  
+</launch>

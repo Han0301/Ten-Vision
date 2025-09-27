@@ -1,0 +1,44 @@
+ConfigPath:
+  - ActuatorsConfig: "actuator_coeff.yaml"
+  - EcatConfig: "ecat/kobe_ecat_config.yaml"
+  - EcatSlaveHWConfig: "ecat_hw/ecat_hw.yaml"
+Actuators:
+  - name: "left_wheel_joint"
+    type: "m3508"
+    id: 0
+    canbus: CAN0  
+    reducer: 19.203208556
+  - name: "right_wheel_joint"
+    type: "m3508"
+    id: 1
+    canbus: CAN0
+    reducer: 19.203208556
+  - name: "front_wheel_joint"
+    type: "m3508"
+    id: 2
+    canbus: CAN0
+    reducer: 19.203208556
+Gpio: # 由于 板上的led是低电平点亮，所以初始值设置为0
+  - name: "led1"
+    type: "output"
+    id: 0
+    initial_value: 0
+  - name: "led2"
+    type: "output"
+    id: 1
+    initial_value: 0
+  - name: "switch1" # 板上的按键为按下的时候为低电平，所以初始值设置为1
+    type: "input"
+    id: 0
+    initial_value: 1
+  - name: "switch2"
+    type: "input"
+    id: 1
+    initial_value: 1
+# Ops9:
+#   - name: "action1"
+#     serial_port: "/dev/ttyACM1"
+
+# 如果使用serial_manager，需要在启动节点之前导入参数
+# Serial_To_32:
+#   name: "upper_board"

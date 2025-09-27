@@ -1,0 +1,12 @@
+controllers:
+  launch_controller:
+    type: launch_controller/LaunchController
+    mechanical_zero_position: -0.014
+    max_distance: 0.32501
+    reset_time: 1.0
+    dribble_distance: 0.13
+    encoder_joint: shoot_encoder_joint
+    motor_joint: shoot_motor_joint
+    trigger_joint: shoot_trigger_joint
+    position_pid: { p: 14.0, i: 0.3, d: 1.5, i_max: 120.0, output_max: 5000.0, deadzone: 0.002}
+    

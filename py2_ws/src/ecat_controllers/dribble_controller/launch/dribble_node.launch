@@ -1,0 +1,6 @@
+<launch>
+  <rosparam file="$(find dribble_controller)/config/dribble.yaml" command="load"/>
+  <node name="dribble_node" pkg="dribble_controller" type="dribble_node"
+  respawn="true" output="screen"
+  />  
+</launch>

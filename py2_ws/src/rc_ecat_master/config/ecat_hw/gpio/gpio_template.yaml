@@ -1,0 +1,17 @@
+gpio_hw:
+  - name: "led1"
+    type: "output"
+    id: 0
+    initial_state: "low" # 这个值是取决于从站硬件，并非ros程序上电就可以给的，只是说，告知ros一个初始的状态
+  - name: "led2"
+    type: "output"
+    id: 1
+    initial_state: "low"
+  - name: "switch1"
+    type: "input"
+    id: 0
+    initial_state: "low"
+  - name: "switch2"
+    type: "input"
+    id: 1
+    initial_state: "low"

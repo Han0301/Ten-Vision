@@ -1,0 +1,11 @@
+time stamp
+uint8 yaw_lock
+bool auto_mode
+bool net_rise
+bool shoot_flag
+bool brake_flag
+bool dribble_flag
+bool world_flag
+bool camera_shoot
+bool set_offset
+bool set_finish

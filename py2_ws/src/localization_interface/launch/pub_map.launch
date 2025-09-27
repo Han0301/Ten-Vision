@@ -1,0 +1,10 @@
+<launch>
+  <param name="use_sim_time" value="false" />
+  <!-- <node pkg="map_server" type="map_server" name="load_basketball_field_map" args="$(find rc_gazebo)/maps/Basketball_field.yaml"> -->
+  <node pkg="map_server" type="map_server" name="load_rc25_map" args="$(find localization_interface)/maps/rc25.yaml">
+
+  </node>
+  <!-- 启动 RViz -->
+  <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find rc_gazebo)/config/rc2025.rviz"/> -->
+
+</launch>

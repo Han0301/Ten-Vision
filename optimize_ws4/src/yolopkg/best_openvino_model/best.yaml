@@ -1,0 +1,1167 @@
+Constant_1021:
+  dtype: int64
+  node_name: Constant_1021
+  shape:
+  - 5
+Constant_1025:
+  dtype: int64
+  node_name: Constant_1025
+  shape: []
+Constant_1057:
+  dtype: int64
+  node_name: Constant_1057
+  shape:
+  - 5
+Constant_1060:
+  dtype: int64
+  node_name: Constant_1060
+  shape: []
+Constant_1092:
+  dtype: int64
+  node_name: Constant_1092
+  shape:
+  - 5
+Constant_1095:
+  dtype: int64
+  node_name: Constant_1095
+  shape: []
+Constant_230:
+  dtype: int64
+  node_name: Constant_230
+  shape:
+  - 3
+Constant_3309:
+  dtype: float32
+  node_name: Constant_3309
+  shape:
+  - 1
+  - 3
+  - 80
+  - 80
+  - 2
+Constant_3316:
+  dtype: float32
+  node_name: Constant_3316
+  shape:
+  - 1
+  - 3
+  - 40
+  - 40
+  - 2
+Constant_3323:
+  dtype: float32
+  node_name: Constant_3323
+  shape:
+  - 1
+  - 3
+  - 20
+  - 20
+  - 2
+Constant_3342:
+  dtype: float32
+  node_name: Constant_3342
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3343:
+  dtype: float32
+  node_name: Constant_3343
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3344:
+  dtype: float32
+  node_name: Constant_3344
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3345:
+  dtype: float32
+  node_name: Constant_3345
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3346:
+  dtype: float32
+  node_name: Constant_3346
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3347:
+  dtype: float32
+  node_name: Constant_3347
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3348:
+  dtype: float32
+  node_name: Constant_3348
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3349:
+  dtype: float32
+  node_name: Constant_3349
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Constant_3350:
+  dtype: float32
+  node_name: Constant_3350
+  shape:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+Reshape_1002:
+  dtype: float32
+  node_name: Reshape_1002
+  shape:
+  - 1
+  - 512
+  - 1
+  - 1
+Reshape_1017:
+  dtype: float32
+  node_name: Reshape_1017
+  shape:
+  - 1
+  - 27
+  - 1
+  - 1
+Reshape_1053:
+  dtype: float32
+  node_name: Reshape_1053
+  shape:
+  - 1
+  - 27
+  - 1
+  - 1
+Reshape_1088:
+  dtype: float32
+  node_name: Reshape_1088
+  shape:
+  - 1
+  - 27
+  - 1
+  - 1
+Reshape_133:
+  dtype: float32
+  node_name: Reshape_133
+  shape:
+  - 1
+  - 32
+  - 1
+  - 1
+Reshape_148:
+  dtype: float32
+  node_name: Reshape_148
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_163:
+  dtype: float32
+  node_name: Reshape_163
+  shape:
+  - 1
+  - 32
+  - 1
+  - 1
+Reshape_178:
+  dtype: float32
+  node_name: Reshape_178
+  shape:
+  - 1
+  - 32
+  - 1
+  - 1
+Reshape_193:
+  dtype: float32
+  node_name: Reshape_193
+  shape:
+  - 1
+  - 32
+  - 1
+  - 1
+Reshape_209:
+  dtype: float32
+  node_name: Reshape_209
+  shape:
+  - 1
+  - 32
+  - 1
+  - 1
+Reshape_225:
+  dtype: float32
+  node_name: Reshape_225
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_240:
+  dtype: float32
+  node_name: Reshape_240
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_255:
+  dtype: float32
+  node_name: Reshape_255
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_270:
+  dtype: float32
+  node_name: Reshape_270
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_285:
+  dtype: float32
+  node_name: Reshape_285
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_301:
+  dtype: float32
+  node_name: Reshape_301
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_316:
+  dtype: float32
+  node_name: Reshape_316
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_332:
+  dtype: float32
+  node_name: Reshape_332
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_348:
+  dtype: float32
+  node_name: Reshape_348
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_363:
+  dtype: float32
+  node_name: Reshape_363
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_378:
+  dtype: float32
+  node_name: Reshape_378
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_393:
+  dtype: float32
+  node_name: Reshape_393
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_408:
+  dtype: float32
+  node_name: Reshape_408
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_424:
+  dtype: float32
+  node_name: Reshape_424
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_439:
+  dtype: float32
+  node_name: Reshape_439
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_455:
+  dtype: float32
+  node_name: Reshape_455
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_470:
+  dtype: float32
+  node_name: Reshape_470
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_486:
+  dtype: float32
+  node_name: Reshape_486
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_502:
+  dtype: float32
+  node_name: Reshape_502
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_517:
+  dtype: float32
+  node_name: Reshape_517
+  shape:
+  - 1
+  - 512
+  - 1
+  - 1
+Reshape_532:
+  dtype: float32
+  node_name: Reshape_532
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_547:
+  dtype: float32
+  node_name: Reshape_547
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_562:
+  dtype: float32
+  node_name: Reshape_562
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_578:
+  dtype: float32
+  node_name: Reshape_578
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_594:
+  dtype: float32
+  node_name: Reshape_594
+  shape:
+  - 1
+  - 512
+  - 1
+  - 1
+Reshape_609:
+  dtype: float32
+  node_name: Reshape_609
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_628:
+  dtype: float32
+  node_name: Reshape_628
+  shape:
+  - 1
+  - 512
+  - 1
+  - 1
+Reshape_643:
+  dtype: float32
+  node_name: Reshape_643
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_662:
+  dtype: float32
+  node_name: Reshape_662
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_677:
+  dtype: float32
+  node_name: Reshape_677
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_692:
+  dtype: float32
+  node_name: Reshape_692
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_707:
+  dtype: float32
+  node_name: Reshape_707
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_723:
+  dtype: float32
+  node_name: Reshape_723
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_738:
+  dtype: float32
+  node_name: Reshape_738
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_757:
+  dtype: float32
+  node_name: Reshape_757
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_772:
+  dtype: float32
+  node_name: Reshape_772
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_787:
+  dtype: float32
+  node_name: Reshape_787
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_802:
+  dtype: float32
+  node_name: Reshape_802
+  shape:
+  - 1
+  - 64
+  - 1
+  - 1
+Reshape_818:
+  dtype: float32
+  node_name: Reshape_818
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_833:
+  dtype: float32
+  node_name: Reshape_833
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_849:
+  dtype: float32
+  node_name: Reshape_849
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_864:
+  dtype: float32
+  node_name: Reshape_864
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_879:
+  dtype: float32
+  node_name: Reshape_879
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_894:
+  dtype: float32
+  node_name: Reshape_894
+  shape:
+  - 1
+  - 128
+  - 1
+  - 1
+Reshape_910:
+  dtype: float32
+  node_name: Reshape_910
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_925:
+  dtype: float32
+  node_name: Reshape_925
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_941:
+  dtype: float32
+  node_name: Reshape_941
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_956:
+  dtype: float32
+  node_name: Reshape_956
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_971:
+  dtype: float32
+  node_name: Reshape_971
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+Reshape_986:
+  dtype: float32
+  node_name: Reshape_986
+  shape:
+  - 1
+  - 256
+  - 1
+  - 1
+_model_11_Constant:
+  dtype: float32
+  node_name: /model.11/Constant
+  shape:
+  - 4
+_model_15_Constant:
+  dtype: float32
+  node_name: /model.15/Constant
+  shape:
+  - 4
+_model_24_Constant:
+  dtype: int64
+  node_name: /model.24/Constant
+  shape:
+  - 5
+_model_24_Constant_14:
+  dtype: float32
+  node_name: /model.24/Constant_14
+  shape:
+  - 1
+  - 3
+  - 40
+  - 40
+  - 2
+_model_24_Constant_15:
+  dtype: int64
+  node_name: /model.24/Constant_15
+  shape:
+  - 3
+_model_24_Constant_16:
+  dtype: int64
+  node_name: /model.24/Constant_16
+  shape:
+  - 5
+_model_24_Constant_22:
+  dtype: float32
+  node_name: /model.24/Constant_22
+  shape:
+  - 1
+  - 3
+  - 20
+  - 20
+  - 2
+_model_24_Constant_23:
+  dtype: int64
+  node_name: /model.24/Constant_23
+  shape:
+  - 3
+_model_24_Constant_6:
+  dtype: float32
+  node_name: /model.24/Constant_6
+  shape:
+  - 1
+  - 3
+  - 80
+  - 80
+  - 2
+_model_24_Constant_7:
+  dtype: int64
+  node_name: /model.24/Constant_7
+  shape:
+  - 3
+_model_24_Constant_8:
+  dtype: int64
+  node_name: /model.24/Constant_8
+  shape:
+  - 5
+model_0_conv_weight:
+  dtype: float32
+  node_name: model.0.conv.weight
+  shape:
+  - 32
+  - 3
+  - 6
+  - 6
+model_10_conv_weight:
+  dtype: float32
+  node_name: model.10.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_13_cv1_conv_weight:
+  dtype: float32
+  node_name: model.13.cv1.conv.weight
+  shape:
+  - 128
+  - 512
+  - 1
+  - 1
+model_13_cv2_conv_weight:
+  dtype: float32
+  node_name: model.13.cv2.conv.weight
+  shape:
+  - 128
+  - 512
+  - 1
+  - 1
+model_13_cv3_conv_weight:
+  dtype: float32
+  node_name: model.13.cv3.conv.weight
+  shape:
+  - 256
+  - 256
+  - 1
+  - 1
+model_13_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.13.m.0.cv1.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_13_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.13.m.0.cv2.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_14_conv_weight:
+  dtype: float32
+  node_name: model.14.conv.weight
+  shape:
+  - 128
+  - 256
+  - 1
+  - 1
+model_17_cv1_conv_weight:
+  dtype: float32
+  node_name: model.17.cv1.conv.weight
+  shape:
+  - 64
+  - 256
+  - 1
+  - 1
+model_17_cv2_conv_weight:
+  dtype: float32
+  node_name: model.17.cv2.conv.weight
+  shape:
+  - 64
+  - 256
+  - 1
+  - 1
+model_17_cv3_conv_weight:
+  dtype: float32
+  node_name: model.17.cv3.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_17_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.17.m.0.cv1.conv.weight
+  shape:
+  - 64
+  - 64
+  - 1
+  - 1
+model_17_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.17.m.0.cv2.conv.weight
+  shape:
+  - 64
+  - 64
+  - 3
+  - 3
+model_18_conv_weight:
+  dtype: float32
+  node_name: model.18.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_1_conv_weight:
+  dtype: float32
+  node_name: model.1.conv.weight
+  shape:
+  - 64
+  - 32
+  - 3
+  - 3
+model_20_cv1_conv_weight:
+  dtype: float32
+  node_name: model.20.cv1.conv.weight
+  shape:
+  - 128
+  - 256
+  - 1
+  - 1
+model_20_cv2_conv_weight:
+  dtype: float32
+  node_name: model.20.cv2.conv.weight
+  shape:
+  - 128
+  - 256
+  - 1
+  - 1
+model_20_cv3_conv_weight:
+  dtype: float32
+  node_name: model.20.cv3.conv.weight
+  shape:
+  - 256
+  - 256
+  - 1
+  - 1
+model_20_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.20.m.0.cv1.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_20_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.20.m.0.cv2.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_21_conv_weight:
+  dtype: float32
+  node_name: model.21.conv.weight
+  shape:
+  - 256
+  - 256
+  - 3
+  - 3
+model_23_cv1_conv_weight:
+  dtype: float32
+  node_name: model.23.cv1.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_23_cv2_conv_weight:
+  dtype: float32
+  node_name: model.23.cv2.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_23_cv3_conv_weight:
+  dtype: float32
+  node_name: model.23.cv3.conv.weight
+  shape:
+  - 512
+  - 512
+  - 1
+  - 1
+model_23_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.23.m.0.cv1.conv.weight
+  shape:
+  - 256
+  - 256
+  - 1
+  - 1
+model_23_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.23.m.0.cv2.conv.weight
+  shape:
+  - 256
+  - 256
+  - 3
+  - 3
+model_24_m_0_weight:
+  dtype: float32
+  node_name: model.24.m.0.weight
+  shape:
+  - 27
+  - 128
+  - 1
+  - 1
+model_24_m_1_weight:
+  dtype: float32
+  node_name: model.24.m.1.weight
+  shape:
+  - 27
+  - 256
+  - 1
+  - 1
+model_24_m_2_weight:
+  dtype: float32
+  node_name: model.24.m.2.weight
+  shape:
+  - 27
+  - 512
+  - 1
+  - 1
+model_2_cv1_conv_weight:
+  dtype: float32
+  node_name: model.2.cv1.conv.weight
+  shape:
+  - 32
+  - 64
+  - 1
+  - 1
+model_2_cv2_conv_weight:
+  dtype: float32
+  node_name: model.2.cv2.conv.weight
+  shape:
+  - 32
+  - 64
+  - 1
+  - 1
+model_2_cv3_conv_weight:
+  dtype: float32
+  node_name: model.2.cv3.conv.weight
+  shape:
+  - 64
+  - 64
+  - 1
+  - 1
+model_2_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.2.m.0.cv1.conv.weight
+  shape:
+  - 32
+  - 32
+  - 1
+  - 1
+model_2_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.2.m.0.cv2.conv.weight
+  shape:
+  - 32
+  - 32
+  - 3
+  - 3
+model_3_conv_weight:
+  dtype: float32
+  node_name: model.3.conv.weight
+  shape:
+  - 128
+  - 64
+  - 3
+  - 3
+model_4_cv1_conv_weight:
+  dtype: float32
+  node_name: model.4.cv1.conv.weight
+  shape:
+  - 64
+  - 128
+  - 1
+  - 1
+model_4_cv2_conv_weight:
+  dtype: float32
+  node_name: model.4.cv2.conv.weight
+  shape:
+  - 64
+  - 128
+  - 1
+  - 1
+model_4_cv3_conv_weight:
+  dtype: float32
+  node_name: model.4.cv3.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_4_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.4.m.0.cv1.conv.weight
+  shape:
+  - 64
+  - 64
+  - 1
+  - 1
+model_4_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.4.m.0.cv2.conv.weight
+  shape:
+  - 64
+  - 64
+  - 3
+  - 3
+model_4_m_1_cv1_conv_weight:
+  dtype: float32
+  node_name: model.4.m.1.cv1.conv.weight
+  shape:
+  - 64
+  - 64
+  - 1
+  - 1
+model_4_m_1_cv2_conv_weight:
+  dtype: float32
+  node_name: model.4.m.1.cv2.conv.weight
+  shape:
+  - 64
+  - 64
+  - 3
+  - 3
+model_5_conv_weight:
+  dtype: float32
+  node_name: model.5.conv.weight
+  shape:
+  - 256
+  - 128
+  - 3
+  - 3
+model_6_cv1_conv_weight:
+  dtype: float32
+  node_name: model.6.cv1.conv.weight
+  shape:
+  - 128
+  - 256
+  - 1
+  - 1
+model_6_cv2_conv_weight:
+  dtype: float32
+  node_name: model.6.cv2.conv.weight
+  shape:
+  - 128
+  - 256
+  - 1
+  - 1
+model_6_cv3_conv_weight:
+  dtype: float32
+  node_name: model.6.cv3.conv.weight
+  shape:
+  - 256
+  - 256
+  - 1
+  - 1
+model_6_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.6.m.0.cv1.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_6_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.6.m.0.cv2.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_6_m_1_cv1_conv_weight:
+  dtype: float32
+  node_name: model.6.m.1.cv1.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_6_m_1_cv2_conv_weight:
+  dtype: float32
+  node_name: model.6.m.1.cv2.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_6_m_2_cv1_conv_weight:
+  dtype: float32
+  node_name: model.6.m.2.cv1.conv.weight
+  shape:
+  - 128
+  - 128
+  - 1
+  - 1
+model_6_m_2_cv2_conv_weight:
+  dtype: float32
+  node_name: model.6.m.2.cv2.conv.weight
+  shape:
+  - 128
+  - 128
+  - 3
+  - 3
+model_7_conv_weight:
+  dtype: float32
+  node_name: model.7.conv.weight
+  shape:
+  - 512
+  - 256
+  - 3
+  - 3
+model_8_cv1_conv_weight:
+  dtype: float32
+  node_name: model.8.cv1.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_8_cv2_conv_weight:
+  dtype: float32
+  node_name: model.8.cv2.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_8_cv3_conv_weight:
+  dtype: float32
+  node_name: model.8.cv3.conv.weight
+  shape:
+  - 512
+  - 512
+  - 1
+  - 1
+model_8_m_0_cv1_conv_weight:
+  dtype: float32
+  node_name: model.8.m.0.cv1.conv.weight
+  shape:
+  - 256
+  - 256
+  - 1
+  - 1
+model_8_m_0_cv2_conv_weight:
+  dtype: float32
+  node_name: model.8.m.0.cv2.conv.weight
+  shape:
+  - 256
+  - 256
+  - 3
+  - 3
+model_9_cv1_conv_weight:
+  dtype: float32
+  node_name: model.9.cv1.conv.weight
+  shape:
+  - 256
+  - 512
+  - 1
+  - 1
+model_9_cv2_conv_weight:
+  dtype: float32
+  node_name: model.9.cv2.conv.weight
+  shape:
+  - 512
+  - 1024
+  - 1
+  - 1
