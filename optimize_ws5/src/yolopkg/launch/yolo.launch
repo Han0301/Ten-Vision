@@ -1,0 +1,22 @@
+<launch>
+  
+  <node pkg="yolopkg" type="yolo_detector_node" name="yolo_detector" output="screen">
+    
+    <param name="model_path" value="$(find yolopkg)/best_openvino_model/best"/>
+    <param name="conf_threshold" value="0.5"/>
+    <param name="cls_threshold" value="0.6"/>
+    <param name="iou_threshold" value="0.5"/>
+    <param name="way" value="1"/> <!--0: 发送最佳检测结果  1：发送阈值以上的检测结果-->
+   
+    <param name="image_topic" value="/camera/color/image_raw"/>
+    
+    <param name="queue_size" value="2"/>
+    <param name="num_threads" value="2"/>
+
+    <param name="classes_num_" value="4"/>
+  </node> 
+
+  <node pkg="basemove" type="basemove_node" name="basemove_node" output="screen"/>
+  <node pkg="camera" type="intel_image.py" name="intel_image" output="screen"/>
+
+</launch>
